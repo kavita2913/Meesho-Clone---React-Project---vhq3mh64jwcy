@@ -4,7 +4,7 @@ import {useParams} from 'react-router-dom';
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import Header from '../Header/Header';
-import './product.css'
+import './Product.css'
 
 
 

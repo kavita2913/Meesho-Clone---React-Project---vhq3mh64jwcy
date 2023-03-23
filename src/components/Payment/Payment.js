@@ -1,8 +1,7 @@
 import React, {useState} from 'react'
 import Header from '../Header/Header'
 import {Container, Row, Col} from 'react-bootstrap'
-import './Payment.css'
-
+import './payment.css'
 const Payment = () => {
 
     const paymentobj = {
