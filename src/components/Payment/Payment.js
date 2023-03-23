@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Header from '../Header/Header'
 import {Container, Row, Col} from 'react-bootstrap'
-import './Pyment.css'
+import './Payment.css'
 
 const Payment = () => {
 
