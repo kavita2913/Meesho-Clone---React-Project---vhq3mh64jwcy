@@ -56,7 +56,7 @@ const ProdDetails = () => {
                         <div className='text-center d-flex justify-content-between pt-3'>
 
                             <Button className='AddtoCart w-50 me-2 fw-bold' onClick={addCartFn}>Add To Cart</Button>
-                            <Button className='w-50 buynow  fw-bold' >Bay Now</Button>
+                            <Button className='w-50 buynow  fw-bold' >Buy Now</Button>
                         </div>
                     </Col>
                     <Col>
