@@ -3,19 +3,19 @@ import Header from './Header'
 import { useEffect, useContext } from 'react';
 import '../styles/products.css'
 import { Link, useNavigate } from 'react-router-dom'
-// import { DataAppContext } from './DataApp';
-// import CartDisplay from './CartDisplay';
+import { DataAppContext } from './DataApp';
+
+
 
 const api = `https://content.newtonschool.co/v1/pr/63b6c911af4f30335b4b3b89/products`
 
 function Products() {
 
-  // const cartData = useContext(DataAppContext);
-  // const navigate = useNavigate();
+  const cartData = useContext(DataAppContext);
+  const navigate = useNavigate();
 
   const [data, setData] = useState([]);
-  // const [login, setLogin] = useState(false);
-  // const [showCart, setShowCart] = useState(false);
+  const [login, setLogin] = useState(false);
 
   const getData = () => {
     fetch(api)
@@ -34,16 +34,16 @@ function Products() {
 
   const handleClick = (item) => {
     if (!localStorage.getItem("loginStatus")) {
-       navigate("/login")
+      alert("You Must Login First")
+      navigate("/login")
     }
     cartData.setDataApp([...cartData.dataApp, item])
-    setShowCart(true);
+
   }
 
   return (
     <div>
       <Header />
-      <h2>Products</h2>
       <div className='productsContains' >
         {data.map((item) => (
           <div className='compcard'>
@@ -59,7 +59,6 @@ function Products() {
           </div>
         ))}
       </div>
-      {/* {showCart && <CartDisplay />} */}
     </div>
   )
 }
