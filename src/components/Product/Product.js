@@ -69,7 +69,7 @@ const ProdDetails = () => {
                             </div>
                         </div>
                         <div className='my-2 border p-3 text-capitalize fs-5 fw-bold' style={{fontFamily: "sans-serif"}}>
-                            <p>Slect Size</p>
+                            <p>Select Size</p>
                             <div className='d-flex justify-content-between w-75 boder-none'>
 
                                 <button className='Sizing'>S</button>
