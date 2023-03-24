@@ -12,12 +12,12 @@ function Cart() {
     const navigate = useNavigate();
 
 
-    // useEffect(() => {
-    //     if (!localStorage.getItem("loginStatus")) {
-    //         alert("You Must Login First")
-    //         navigate("/login")
-    //     }
-    // }, [])
+    useEffect(() => {
+        if (!localStorage.getItem("loginStatus")) {
+            alert("You Must Login First")
+            navigate("/login")
+        }
+    }, [])
 
     const removeItems = (index) => {
         let tempArr = [...cartData.dataApp];
