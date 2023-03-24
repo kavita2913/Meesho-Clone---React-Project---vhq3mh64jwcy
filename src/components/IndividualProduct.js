@@ -30,8 +30,8 @@ function IndividualProduct() {
     };
     useEffect(() => {
         if (!localStorage.getItem("loginStatus")) {
-            alert("You Must Login First")
-            navigate("/login", { state: { preLocation: `/individualproduct`, id: fetchId.id } })
+            // alert("You Must Login First")
+            navigate({ state: { preLocation: `/individualproduct`, id: fetchId.id } })
         }
         getDatas(`${apikey}`)
 
