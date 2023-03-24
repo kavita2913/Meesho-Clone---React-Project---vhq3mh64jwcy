@@ -1,31 +1,32 @@
 import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import '../styles/App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './Header/Header';
-import Home from './Home/Home.js'
-import {BrowserRouter, Routes, Route} from "react-router-dom";
-import Product from './Product/Product';
-import Cart from './cart/Cart';
-import Login from './Login/Login';
-import Singnup from './SignUp/Singup';
-import Payment from './Payment/Payment';
+import IndividualProduct from './IndividualProduct';
+import NewUser from './NewUser';
+import Products from './Products';
+import Login from './Login';
+import CartDisplay from './CartDisplay';
+import DataApp from './DataApp';
+import Payment from './Payment';
+import Cart from './Cart';
 
 const App = () => {
 
-
   return (
     <div id="main">
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/product/:id' element={<Product />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/Singnup' element={<Singnup />} />
-          <Route path='/Payment' element={<Payment />} />
-        </Routes>
-
-      </BrowserRouter>
+      <DataApp>
+        {<BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Products />} />
+            <Route path="/individualproduct/:id" element={<IndividualProduct />} />
+            <Route path="/newuser" element={<NewUser />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/cartdisplay" element={<CartDisplay />} />
+            <Route path="/payment" element={<Payment />} />
+            <Route path='/cart' element={<Cart/>}/>
+          </Routes>
+        </BrowserRouter>}
+      </DataApp>
     </div>
   )
 }
