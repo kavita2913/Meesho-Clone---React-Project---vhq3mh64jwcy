@@ -34,7 +34,7 @@ function Products() {
 
   const handleClick = (item) => {
     if (!localStorage.getItem("loginStatus")) {
-       navigate("/cart")
+       navigate("/login")
     }
     cartData.setDataApp([...cartData.dataApp, item])
     setShowCart(true);
