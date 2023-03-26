@@ -34,12 +34,11 @@ function Products() {
 
   const handleClick = (item) => {
     if (!localStorage.getItem("loginStatus")) {
-      alert("You Must Login First");
+      alert("You must log in to add items to your cart.");
       navigate("/login");
     } else {
       cartData.setDataApp([...cartData.dataApp, item]);
     }
-    localStorage.setItem("loginStatus", true);
   }
 
   return (
