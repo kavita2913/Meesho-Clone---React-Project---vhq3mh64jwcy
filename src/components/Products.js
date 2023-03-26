@@ -33,10 +33,10 @@ function Products() {
   }, [])
 
   const handleClick = (item) => {
-    if (!localStorage.getItem("loginStatus")) {
-      alert("You Must Login First")
-      navigate("/login")
-    }
+    // if (!localStorage.getItem("loginStatus")) {
+    //   alert("You Must Login First")
+    //   navigate("/login")
+    // }
     cartData.setDataApp([...cartData.dataApp, item])
 
   }

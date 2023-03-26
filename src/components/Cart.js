@@ -13,10 +13,10 @@ function Cart() {
 
 
     useEffect(() => {
-        if (!localStorage.getItem("loginStatus")) {
-            alert("You Must Login First")
-            navigate("/login")
-        }
+        // if (!localStorage.getItem("loginStatus")) {
+        //     alert("You Must Login First")
+        //     navigate("/login")
+        // }
     }, [])
 
     const removeItems = (index) => {

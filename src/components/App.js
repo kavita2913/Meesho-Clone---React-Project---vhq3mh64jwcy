@@ -8,7 +8,7 @@ import Login from './Login';
 import CartDisplay from './CartDisplay';
 import DataApp from './DataApp';
 import Payment from './Payment';
-import Cart from './Cart';
+// import Cart from './Cart';
 
 const App = () => {
 
@@ -23,7 +23,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/cartdisplay" element={<CartDisplay />} />
             <Route path="/payment" element={<Payment />} />
-            <Route path='/cart' element={<Cart/>}/>
+            {/* <Route path='/cart' element={<Cart/>}/> */}
           </Routes>
         </BrowserRouter>}
       </DataApp>
