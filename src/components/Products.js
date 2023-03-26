@@ -33,12 +33,13 @@ function Products() {
   }, [])
 
   const handleClick = (item) => {
-    // if (!localStorage.getItem("loginStatus")) {
-    //   alert("You Must Login First")
-    //   navigate("/login")
-    // }
-    cartData.setDataApp([...cartData.dataApp, item])
-
+    if (!localStorage.getItem("loginStatus")) {
+      alert("You Must Login First");
+      navigate("/login");
+    } else {
+      cartData.setDataApp([...cartData.dataApp, item]);
+    }
+    localStorage.setItem("loginStatus", true);
   }
 
   return (
