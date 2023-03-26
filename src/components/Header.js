@@ -24,7 +24,6 @@ function Header() {
         <button className='cartButtton'>
           <i className="fa fa-shopping-cart cartIcon"></i>
           <Link className='cartpara' to="/cartdisplay">Cart{cartData.dataApp.length}</Link></button>
-        <button className='logoutBtn' onClick={logoutBtn}>Logout</button>
       </nav>
     </div>
   )
