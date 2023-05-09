@@ -1,16 +1,31 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export const DataAppContext = React.createContext();
 
 const DataApp = (props) => {
 
-  const [dataApp, setDataApp] = useState([]);
+    const initialState = {
+        loginStatus: false,
+        username: '',
+        totalCount: 0,
+        searchItem: '',
+    }
+
+    const [appState, setAppState] = useState(initialState);
+
+    useEffect(()=>{
+        console.log("context data", appState);
+    })
 
   return (
-    <DataAppContext.Provider value={{ dataApp, setDataApp }}>
-      {props.children}
-    </DataAppContext.Provider>
+    <div>
+        <DataAppContext.Provider value={{appState, setAppState}}>
+
+            {props.children}
+
+        </DataAppContext.Provider>
+    </div>
   )
 }
 
-export default DataApp;
+export default DataApp
