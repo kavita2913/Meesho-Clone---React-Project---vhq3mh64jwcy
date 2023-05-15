@@ -35,7 +35,7 @@ function Login() {
       <div className='login_cmp'>
         <div className="login_username">
             <p className='lgcpmov'>Email:</p>
-           <input type="text" placeholder='enter your email or mobile' className='lgcpmov' onChange={(e)=>{setLoginDetails({...logindetails,
+           <input type="text" placeholder='enter your email' className='lgcpmov' onChange={(e)=>{setLoginDetails({...logindetails,
            username:e.target.value
            })}}/>
         </div>
