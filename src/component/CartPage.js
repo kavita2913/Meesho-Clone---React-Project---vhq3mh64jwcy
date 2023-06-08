@@ -48,7 +48,7 @@ const alft =()=>{
     <div className='cartpage_right'>
           
            <p className='crtpagettl'>Total Price: ₹{total &&(parseInt(total, 10))}</p>
-           <p className='crtpagettl'>Total Discount: ₹100 
+           <p className='crtpagettl'>Total Discount: ₹10 
            </p>
            <p>Total you have to pay <span className='spncrtpagettl'>₹{total &&(parseInt(total, 10))}</span> <span>₹{total && (parseInt(total, 10))-10}</span></p>
            <Link to={'/paymentpage'} style={{textDecoration: 'none'}} >
