@@ -8,7 +8,7 @@ function Item(props) {
         <img src={props.img} alt=""  className='item_img'/>
          <p className='productname'>{props.name}</p>
         <p className='productprice'>₹ {props.price} <span className='onwords'>onwords</span></p>
-         <p className='productdiscount'> ₹ 100 discount on 1st order</p>
+         <p className='productdiscount'> ₹ 10 discount on 1st order</p>
         <div className="rating">
          <p className='rate'>{props.rating.rate}<StarIcon/></p>
          
